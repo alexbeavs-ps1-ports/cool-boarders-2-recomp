@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Cool Boarders 2",
+    "id": "SCUS-94358",
+    "boot_exe": "SCUS_943.58"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Cool Boarders 2 (USA).cue",
+    "bin_name": "Cool Boarders 2 (USA) (Track 1).bin",
+    "track_counts": [
+      21
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 154759248,
+      "md5": "641ea195e364eca98579f9a47cf0c796",
+      "sha1": "a6e71a783e06e6862c2d406eb8dc885201aa6108",
+      "crc32": "467c37cd"
+    },
+    "disc_fp": "40da1002f9f957ac2ff2497a206d39c8c41ab1d965861329e29ba3d71d4ff215"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x800120FC",
+    "text_size": "0x00040800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 420,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

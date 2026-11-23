@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Cool Boarders 2"
+id = "SCUS-94358"
+players = 1
+exe = "disc/SCUS_943.58"
+disc = "disc/Cool Boarders 2 (USA).cue"
+discs = ["disc/Cool Boarders 2 (USA).cue"]
+disc_serials = ["SCUS-94358"]
+load_address = "0x80010000"
+entry_pc = "0x800120FC"
+text_size = "0x00040800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Cool Boarders 2 (USA) (Track 1).bin"
+cue_name = "Cool Boarders 2 (USA).cue"
+boot_exe = "SCUS_943.58"
+known_sizes = [154759248]
+known_md5 = [
+  "641ea195e364eca98579f9a47cf0c796",
+]
+known_sha1 = [
+  "a6e71a783e06e6862c2d406eb8dc885201aa6108",
+]
+known_crc32 = [
+  "467c37cd",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Cool Boarders 2 Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 21
+required_disc_fp = "40da1002f9f957ac2ff2497a206d39c8c41ab1d965861329e29ba3d71d4ff215"

@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "cool-boarders-2-psx",
+  "name": "Cool Boarders 2",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "cool-boarders-2-recomp",
+  "rom_identity": {
+    "crc32": [
+      "467c37cd"
+    ],
+    "md5": [
+      "641ea195e364eca98579f9a47cf0c796"
+    ],
+    "sha1": [
+      "a6e71a783e06e6862c2d406eb8dc885201aa6108"
+    ],
+    "disc_serials": [
+      "SCUS-94358"
+    ],
+    "sizes": [
+      154759248
+    ],
+    "filenames": [
+      "Cool Boarders 2 (USA).cue",
+      "Cool Boarders 2 (USA) (Track 1).bin"
+    ],
+    "track_counts": [
+      21
+    ],
+    "disc_fps": [
+      "40da1002f9f957ac2ff2497a206d39c8c41ab1d965861329e29ba3d71d4ff215"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/cool-boarders-2-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "cool-boarders-2-*-windows-x64.zip",
+      "linux-x64": "cool-boarders-2-*-linux-x64.zip",
+      "macos-arm64": "cool-boarders-2-*-macos-arm64.zip",
+      "macos-x64": "cool-boarders-2-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "cool_boarders_2.exe",
+    "linux": "cool_boarders_2",
+    "macos": "cool_boarders_2"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/cool-boarders-2-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
